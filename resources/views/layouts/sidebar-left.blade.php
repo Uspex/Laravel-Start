@@ -21,21 +21,40 @@
                         </a>
                     </li><!-- .nk-menu-item -->
 
+
+
                     <li class="nk-menu-heading">
-                        <h6 class="overline-title text-primary-alt">{{ __('Роли / Разрешения') }}</h6>
+                        <h6 class="overline-title text-primary-alt">{{ __('Пользователи') }}</h6>
                     </li><!-- .nk-menu-heading -->
+
+                    @ability('root', 'list_user')
+                    <li class="nk-menu-item">
+                        <a href="{{ route('user.index') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-text">{{ __('Пользователи') }}</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
+                    @endability
+
+
+                    @ability('root', 'list_role')
                     <li class="nk-menu-item">
                         <a href="{{ route('role.index') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-shield-check-fill"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-security"></em></span>
                             <span class="nk-menu-text">{{ __('Роли') }}</span>
                         </a>
-                    </li>
+                    </li><!-- .nk-menu-item -->
+                    @endability
+
+                    @ability('root', 'list_permission')
                     <li class="nk-menu-item">
                         <a href="{{ route('permission.index') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-shield-half"></em></span>
-                            <span class="nk-menu-text">{{ __('Разрешения') }}</span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-policy"></em></span>
+                            <span class="nk-menu-text">{{ __('Правила') }}</span>
                         </a>
-                    </li>
+                    </li><!-- .nk-menu-item -->
+                    @endability
+
                 </ul><!-- .nk-menu -->
             </div><!-- .nk-sidebar-menu -->
         </div><!-- .nk-sidebar-content -->
