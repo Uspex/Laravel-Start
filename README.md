@@ -10,8 +10,8 @@
 1. Клонировать проект с гита (https://github.com/Uspex/Laravel-Start)
 2. Запустить `composer install`
 3. Настроить в `.env` файле подключения к БД
-4. php artisan `config:cache`
-5. php artisan `cache:clear`
+4. `php artisan config:cache`
+5. `php artisan cache:clear`
 6. Запустить Миграции `php artisan migrate`
 7. Запускаем `php artisan db:seed`    
    1. CreateRole - Стартовые роли
