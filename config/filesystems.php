@@ -56,6 +56,34 @@ return [
             'throw' => false,
         ],
 
+        'category' => [
+            'driver' => 'local',
+            'root' => public_path('images/category'),
+            'url' => 'images/category',
+            'visibility' => 'public',
+        ],
+
+        'tags' => [
+            'driver' => 'local',
+            'root' => public_path('images/tags'),
+            'url' => 'images/tags',
+            'visibility' => 'public',
+        ],
+
+        'page' => [
+            'driver' => 'local',
+            'root' => public_path('images/page'),
+            'url' => 'images/page',
+            'visibility' => 'public',
+        ],
+
+        'post' => [
+            'driver' => 'local',
+            'root' => public_path('images/post'),
+            'url' => 'images/post',
+            'visibility' => 'public',
+        ],
+
     ],
 
     /*

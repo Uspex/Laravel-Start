@@ -11,7 +11,7 @@
 
 
 //Client
-Route::group(['middleware' => ['auth', 'verified', 'role:client']], function(){
+Route::group(['middleware' => ['auth', 'role:client']], function(){
 
 
 

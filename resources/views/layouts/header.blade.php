@@ -3,9 +3,10 @@
         <div class="container nav-header-container">
             <div class="col-6 col-lg-2 mr-auto pl-lg-0">
                 <a class="navbar-brand" href="{{ route('homepage') }}">
-                    <img src="{{ asset('assets/images/logo.png') }}" data-at2x="{{ asset('assets/images/logo.png') }}" class="default-logo">
-                    <img src="{{ asset('assets/images/logo.png') }}" data-at2x="{{ asset('assets/images/logo.png') }}" class="alt-logo">
-                    <img src="{{ asset('assets/images/logo.png') }}" data-at2x="{{ asset('assets/images/logo.png') }}" class="mobile-logo">
+                    <img src="{{ asset('assets/images/logo-gradient-sky-blue-pink.png') }}" data-at2x="{{ asset('assets/images/logo-gradient-sky-blue-pink@2x.png') }}" class="default-logo" alt="">
+                    <img src="{{ asset('assets/images/logo-black.png') }}" data-at2x="{{ asset('assets/images/logo-black@2x.png') }}" class="alt-logo" alt="">
+                    <img src="{{ asset('assets/images/logo-gradient-sky-blue-pink.png') }}" data-at2x="{{ asset('assets/images/logo-gradient-sky-blue-pink@2x.png') }}" class="mobile-logo" alt="">
+
                 </a>
             </div>
             <div class="col-auto menu-order px-lg-0">
@@ -19,8 +20,6 @@
                     <ul class="navbar-nav alt-font text-uppercase">
                         <li class="nav-item"><a href="{{ route('homepage') }}" class="nav-link">{{ __('Главная') }}</a></li>
                         <li class="nav-item"><a href="{{ route('blog.index') }}" class="nav-link">{{ __('Блог') }}</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">{{ __('Контакты') }}</a></li>
-
                         @if(auth()->user())
 
                             @if(auth()->user()->hasRole('client'))

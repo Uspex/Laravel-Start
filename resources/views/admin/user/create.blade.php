@@ -47,7 +47,7 @@
                                                             </div>
                                                             <div class="col-lg-3">
                                                                 <div class="form-group">
-                                                                    <label class="form-label" for="email">{{ __('Email') }}</label>
+                                                                    <label class="form-label" for="email">Email</label>
                                                                     <input name="email" value="{{ old('email') }}"
                                                                            id="email"
                                                                            type="text"

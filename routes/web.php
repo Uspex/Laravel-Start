@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 //Авторизация
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 
 /**************************************************

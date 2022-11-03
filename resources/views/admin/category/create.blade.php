@@ -116,7 +116,7 @@
                                                         <label class="form-label" for="seo_description">{{ __('description') }}</label>
                                                         <textarea name="seo_description"
                                                                   id="seo_description"
-                                                                  class="form-control summernote-basic"
+                                                                  class="form-control"
                                                                   rows="6">{{ old('seo_description') }}</textarea>
                                                     </div>
                                                 </div>

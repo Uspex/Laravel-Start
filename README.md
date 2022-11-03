@@ -4,6 +4,9 @@
 - Laravel Framework 9.9.0
 - Laratrust (https://laratrust.santigarcor.me/) - система управления Ролями
 
+### Использованные шаблоны
+1. Admin panel - DashLite https://themeforest.net/item/dashlite-bootstrap-responsive-admin-dashboard-template/25780042
+2. Web site template - Litho https://themeforest.net/item/litho-the-multipurpose-html5-template/29955912
 
 ## Установка
 

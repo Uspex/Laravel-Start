@@ -28,7 +28,7 @@
                             <div class="nk-tb-list">
                                 <div class="nk-tb-item nk-tb-head">
                                     <div class="nk-tb-col"><span>{{ __('Имя') }}</span></div>
-                                    <div class="nk-tb-col"><span>{{ __('Email') }}</span></div>
+                                    <div class="nk-tb-col"><span>Email</span></div>
                                     <div class="nk-tb-col text-center"><span>{{ __('Роль') }}</span></div>
                                     <div class="nk-tb-col text-center"><span>{{ __('Статус') }}</span></div>
                                     <div class="nk-tb-col text-right"><em class="icon ni ni-setting"></em></div>

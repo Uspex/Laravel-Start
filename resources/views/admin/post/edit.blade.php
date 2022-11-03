@@ -13,14 +13,14 @@
                 </div>
                 <div class="nk-block-head-content d-flex">
                     @if($item->published_at)
-                        <form method="POST" action="{{ route('admin.post.not_publish', $item->id) }}" data-toggle="tooltip" data-placement="top" title="{{ __('Снять с публикации') }}">
+                        <form method="POST" action="{{ route('admin.post.not_publish', $item->id) }}" >
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-success mr-3" ><em class="icon ni ni-eye-fill"></em></button>
+                            <button type="submit" class="btn btn-sm btn-secondary" >{{ __('Снять с публикации') }}</button>
                         </form>
                     @else
                         <form method="POST" action="{{ route('admin.post.publish', $item->id) }}">
                             @csrf
-                            <button type="submit" class="btn btn-sm btn-secondary" data-toggle="tooltip" data-placement="top" title="{{ __('Опубликовать') }}"><em class="icon ni ni-eye-off-fill"></em></button>
+                            <button type="submit" class="btn btn-sm btn-success">{{ __('Опубликовать') }}</button>
                         </form>
                     @endif
 
@@ -157,7 +157,7 @@
                                                         <label class="form-label" for="seo_description">{{ __('description') }}</label>
                                                         <textarea name="seo_description"
                                                                   id="seo_description"
-                                                                  class="form-control summernote-basic"
+                                                                  class="form-control"
                                                                   rows="6">{{ old('seo_description', $item->seo_description) }}</textarea>
                                                     </div>
                                                 </div>

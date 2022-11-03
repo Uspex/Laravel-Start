@@ -27,7 +27,6 @@ class CreateUser extends Seeder
                 $new_user = User::create([
                     'name'  => $user['name'],
                     'email' => $user['email'],
-                    'email_verified_at' => Carbon::now(),
                     'password' => Hash::make($user['password']),
                 ]);
 
