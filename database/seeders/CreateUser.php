@@ -4,13 +4,15 @@ namespace Database\Seeders;
 
 use App\Models\Role;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 class CreateUser extends Seeder
 {
     private $user_list = [
-        0 => [ 'name' => 'root', 'email' => 'root@root.com', 'password' => 'T6D0n6AffJKM', 'role' => 'root'],
+        0 => [ 'name' => 'root', 'email' => 'root@root.com', 'password' => 'uV9Y3zY0nAxf', 'role' => 'root'],
+        1 => [ 'name' => 'root', 'email' => 'client@client.com', 'password' => 'CMLio1N6N2m9', 'role' => 'client'],
     ];
     /**
      * Run the database seeds.
@@ -25,6 +27,7 @@ class CreateUser extends Seeder
                 $new_user = User::create([
                     'name'  => $user['name'],
                     'email' => $user['email'],
+                    'email_verified_at' => Carbon::now(),
                     'password' => Hash::make($user['password']),
                 ]);
 

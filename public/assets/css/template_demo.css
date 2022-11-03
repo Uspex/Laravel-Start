@@ -1,0 +1,16 @@
+/*
+
+1. Add your custom Css styles below
+2. Place the this code in your template:
+
+ <link href="css/custom.css" rel="stylesheet">
+
+*/
+
+.full-screen-preview {
+    height: calc(100vh - 60px);
+}
+.full-screen-preview > iframe{
+    height: 100%;
+    width: 100%;
+}

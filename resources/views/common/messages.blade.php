@@ -1,14 +1,25 @@
-
 @if($errors->any())
-    @foreach($errors->all() as $errorTxt)
-        <div class="alert alert-fill alert-danger alert-dismissible alert-icon">
-            <em class="icon ni ni-cross-circle"></em> <strong>{{ __('Warning') }}</strong>! {{ $errorTxt }} <button class="close" data-dismiss="alert"></button>
-        </div>
-    @endforeach
+    <div role="alert" class="alert alert-danger alert-dismissible container mt-3">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>
+        <strong><i class="fa fa-warning"></i> {{ __('message.alert') }}!</strong>
+        <ul class="list-icon list-icon-arrow ml-3">
+            @foreach($errors->all() as $errorTxt)
+                <li>{{ $errorTxt }}</li>
+            @endforeach
+        </ul>
+    </div>
 @endif
 @if(session('success'))
-    <div class="alert alert-fill alert-success alert-icon">
-        <em class="icon ni ni-check-circle"></em> <strong>{{ __('Success') }}</strong>. {{ session()->get('success') }} <button class="close" data-dismiss="alert"></button>
+    <div role="alert" class="alert alert-success alert-dismissible container mt-3">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>
+        <strong><i class="fa fa-check-circle"></i>{{ __('message.alert') }}!</strong> {{ session()->get('success') }}
+    </div>
+@endif
+
+@if(session('message_error'))
+    <div role="alert" class="alert alert-danger alert-dismissible container mt-3">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>
+        <strong><i class="fa fa-check-circle"></i>{{ __('message.alert') }}!</strong> {{ session()->get('message_error') }}
     </div>
 @endif
 

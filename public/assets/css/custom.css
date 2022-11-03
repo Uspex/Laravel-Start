@@ -1,0 +1,110 @@
+/*
+
+1. Add your custom Css styles below
+2. Place the this code in your template:
+
+ <link href="css/custom.css" rel="stylesheet">
+
+*/
+
+.grecaptcha-badge {
+    display: none;
+}
+.container {
+
+}
+.m-t-100 {
+    margin-top: 100px;
+}
+
+form .success_promo {
+    border: 2px dashed #28a745;
+    color: #28a745;
+}
+.cart-product-price {
+    min-width: 80px;
+}
+.cart-product-subtotal {
+
+}
+.total-amount th{
+    padding-top: 28px;
+    padding-left: 40px;
+}
+@media (max-width: 768px) {
+    .cart-products .product-price {
+        display: inline-block;
+        width: 30%;
+    }
+    .cart-products .product-rent {
+        display: inline-block;
+        width: 30%;
+    }
+    .cart-products .product-subtotal {
+        display: inline-block;
+        width: 30%;
+    }
+
+    .cart-products .total-amount {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+.parent_product {
+
+}
+.parent_product td:nth-child(1) {
+    border-bottom: 0;
+}
+.sub_product {
+
+}
+.sub_product td{
+    padding: 5px;
+    border: none;
+}
+.sub_product .product-name{
+   font-size: 12px;
+}
+.sub_product.last_sub_product td{
+    border-bottom: 1px solid #e4e4e4;
+}
+.crossed_out_price {
+    white-space:pre;
+    position:relative;
+    display:inline-block;
+    font-size:16px;
+}
+
+.crossed_out_price:after{
+    content:"";
+    display:block;
+    position:absolute;
+    left:0;top:50%;
+    color:red;
+    width:100%;
+    height:0;
+    border-bottom:2px solid red;
+    transform:rotate(-20deg);
+}
+.blur_bg_1 {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    width: 100%;
+}
+
+.btn_partner_promo {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1000;
+}
+.btn_partner_promo .success,
+.btn_partner_promo .success:hover{
+    background: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}

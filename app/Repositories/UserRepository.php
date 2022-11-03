@@ -34,6 +34,7 @@ class UserRepository extends CoreRepository
         $result = $this
             ->startConditions()
             ->select($columns)
+            ->withTrashed()
             ->find($id);
 
         return $result;
@@ -54,9 +55,28 @@ class UserRepository extends CoreRepository
         $result = $this
             ->startConditions()
             ->select($columns)
+            ->withTrashed()
             ->paginate($perPage);
 
         return $result;
     }
 
+    /**
+     * Получаем список
+     *
+     * @return Collection
+     */
+    public function getList()
+    {
+        $columns = ['*'];
+
+        $result = $this
+            ->startConditions()
+            ->select($columns)
+            ->withTrashed()
+            ->orderBy('name')
+            ->get();
+
+        return $result;
+    }
 }

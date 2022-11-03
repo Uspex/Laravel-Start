@@ -21,11 +21,11 @@ class CreateRole extends Seeder
         $admin->description  = 'Позволят управлять всем сервисом'; // optional
         $admin->save();
 
-        //manager
+        //client
         $client = new Role();
-        $client->name         = 'manager';
-        $client->display_name = 'Manager'; // optional
-        $client->description  = 'Менеджер'; // optional
+        $client->name         = 'client';
+        $client->display_name = 'Клиент'; // optional
+        $client->description  = 'Клиент'; // optional
         $client->save();
     }
 }

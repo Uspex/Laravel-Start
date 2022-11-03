@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,28 +14,50 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('welcome');
 
-Auth::routes();
+//Авторизация
+Auth::routes(['verify' => true]);
 
-//Admin
-Route::group(['middleware' => ['auth', 'role:root|manager']], function(){
 
-    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+/**************************************************
+Без авторизации
+/**************************************************/
 
-    //Роли
-    Route::group(['namespace' => 'Role'], function(){
-        Route::resource('role', '\App\Http\Controllers\Role\RoleController')->names('role');
-    });
 
-    //Правила / Разрешения
-    Route::group(['namespace' => 'Permission'], function(){
-        Route::resource('permission', '\App\Http\Controllers\Permission\PermissionController')->names('permission');
-    });
+//Главная страница сайта
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 
-    //Пользователи
-    Route::group(['namespace' => 'User'], function() {
-        Route::resource('user', '\App\Http\Controllers\User\UserController')->except(['show'])->names('user');
-    });
+
+//Страницы
+//Route::group(['namespace' => 'Page'], function(){
+//    Route::get('page/{slug}', [App\Http\Controllers\Page\PageController::class, 'show'])->name('page.show');
+//});
+
+
+//Блог
+Route::group(['namespace' => 'Blog'], function(){
+    Route::get('blogs/{category?}', [App\Http\Controllers\Blog\BlogController::class, 'index'])->name('blog.index');
+    Route::get('blog/{slug}', [App\Http\Controllers\Blog\BlogController::class, 'show'])->name('blog.show');
 });
+
+
+//
+////Sitemap
+//Route::group(['namespace' => 'Sitemap'], function(){
+//    Route::get('sitemap/sitemap.xml', 'SitemapController@show')->name('sitemap.show');
+//});
+
+
+/**************************************************
+Client
+/**************************************************/
+include('roles/client.php');
+
+
+/**************************************************
+Admin
+/**************************************************/
+include('roles/admin.php');
+
+
 

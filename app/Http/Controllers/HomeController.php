@@ -2,35 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\MetaServices;
 
 class HomeController extends Controller
 {
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * @var MetaServices
      */
+    private $meta;
+
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->meta = app(MetaServices::class);
     }
 
     /**
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function welcome()
-    {
-        return redirect()->route('login');
-    }
-
-    /**
+     * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
+    public function index()
     {
-        return view('dashboard');
+
+        $meta = $this->meta->getMeta('homepage');
+
+        return view('homepage', compact('meta'));
     }
 }

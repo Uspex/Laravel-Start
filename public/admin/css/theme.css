@@ -1,0 +1,107 @@
+/*!
+ * Theme Name: Default
+ * Package : DashLite
+ * Author: Softnio
+ * Author URI: http://themeforest.net/user/softnio
+ * Version	 :	1.0.0
+ * Updated	 :	07.23.2020
+**/
+
+/* width */
+.w-25px {
+    width: 25px;
+}
+
+.rotate-90{
+    transform: rotate(90deg);
+}
+
+.rotate-180{
+    transform: rotate(180deg);
+}
+
+
+/* image-upload image-preview */
+.image-upload {
+    position: relative;
+    max-width: 100%;
+}
+.image-upload .image-edit {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 100%;
+    text-align: center;
+}
+.image-upload .image-edit input {
+    display: none;
+}
+.image-upload .image-edit input + label {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 10px 3px rgb(0 0 0 / 50%);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+    font-size: 20px;
+    padding-top: 3px;
+
+}
+.image-upload .image-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.image-upload .image-preview {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    min-height: 160px;
+    position: relative;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image-upload.image_upload_mini  {
+
+}
+
+.image-upload.image_upload_mini .image-preview{
+    max-height: 70px;
+    min-height: 70px;
+}
+.image-upload.image_upload_mini .image-preview.preview-lg{
+    max-height: 170px;
+    min-height: 170px;
+}
+.image-upload.image_upload_mini .image-edit input + label {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* site-status */
+.site-status-in_process {
+    color: #fff;
+    background-color: #8091a7;
+}
+.site-status-not_published {
+    color: #fff;
+    background-color: #e85347;
+}
+.site-status-published {
+    color: #fff;
+    background-color: #1ee0ac;
+}
