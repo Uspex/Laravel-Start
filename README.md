@@ -23,3 +23,7 @@
    2. PermissionSeeder - Разрешения для ролей
    3. CreateUser - пользователи для доступа в админ панель(логин и пароль смотреть в данном сидере)
 
+    
+## Contacts
+* https://chernoshtan.com/
+* https://www.linkedin.com/in/uspex/
